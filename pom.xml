@@ -82,6 +82,8 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!-- SonarQube Plugin -->
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
@@ -94,6 +96,12 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <!-- Ensure sonar properties are being passed correctly -->
+                    <sonar.projectKey>${sonar.projectKey}</sonar.projectKey>
+                    <sonar.organization>${sonar.organization}</sonar.organization>
+                    <sonar.host.url>${sonar.host.url}</sonar.host.url>
+                </configuration>
             </plugin>
         </plugins>
     </build>
