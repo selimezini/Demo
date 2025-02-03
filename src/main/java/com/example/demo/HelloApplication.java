@@ -15,6 +15,8 @@ public class HelloApplication extends Application {
         stage.setTitle("Hello boss!");
         stage.setScene(scene);
         stage.show();
+    System.out.println("ore kapo!");
+
     }
 
     public static void main(String[] args) {
